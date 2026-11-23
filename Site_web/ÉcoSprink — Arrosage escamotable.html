@@ -1,0 +1,152 @@
+
+<!-- saved from url=(0100)file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉcoSprink — Arrosage escamotable</title>
+  <style>
+    :root{--green:#1f6b4a;--dark:#17382b;--mint:#eaf4ee;--cream:#f7f8f4;--text:#24332b;--muted:#66756b;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid #e5ebe5}
+    nav{max-width:1160px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.04em;font-size:1.25rem;color:var(--dark)}
+    .brand-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--green);color:white;font-size:20px}
+    .links{display:flex;gap:26px;align-items:center;font-size:.92rem;color:#526158}
+    .links a:hover{color:var(--green)}
+    .nav-cta{background:var(--green);color:white;padding:10px 16px;border-radius:999px;font-weight:700}
+    .hero{max-width:1160px;margin:36px auto 0;padding:0 24px;display:grid;grid-template-columns:1.03fr .97fr;gap:42px;align-items:center}
+    .eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.76rem}
+    h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.06;letter-spacing:-.06em;color:var(--dark);margin:15px 0 20px}
+    h1 span{color:var(--green)}
+    .hero p{max-width:540px;color:var(--muted);font-size:1.08rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 19px;border-radius:999px;font-weight:750;display:inline-flex;align-items:center;gap:8px}
+    .btn.primary{background:var(--green);color:white;box-shadow:0 8px 22px #1f6b4a22}
+    .btn.secondary{border:1px solid #d4dfd6;background:white;color:var(--dark)}
+    .hero-image{height:440px;border-radius:28px;overflow:hidden;position:relative;box-shadow:0 24px 60px #17382b20;background:#dfece2}
+    .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+    .image-tag{position:absolute;bottom:20px;left:20px;background:#ffffffed;padding:12px 16px;border-radius:16px;font-size:.88rem;font-weight:700;box-shadow:0 5px 20px #0001}
+    section{max-width:1160px;margin:0 auto;padding:90px 24px}
+    .section-head{text-align:center;max-width:690px;margin:0 auto 42px}
+    h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.15;letter-spacing:-.04em;color:var(--dark);margin:10px 0 14px}
+    .section-head p,.card p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid #e6ece6;border-radius:22px;overflow:hidden;box-shadow:0 8px 28px #17382b08}
+    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card-content{padding:22px}
+    .number{display:inline-grid;place-items:center;width:32px;height:32px;background:var(--mint);color:var(--green);border-radius:10px;font-weight:800;margin-bottom:12px}
+    h3{font-size:1.15rem;color:var(--dark);margin-bottom:8px}
+    .how{background:var(--mint);max-width:none}
+    .how-inner{max-width:1160px;margin:auto}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+    .step{background:#fff;border-radius:20px;padding:24px;border:1px solid #dce9df}
+    .step-icon{font-size:1.8rem;margin-bottom:12px}
+    .step p{color:var(--muted);font-size:.95rem}
+    .proscons{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .panel{padding:28px;border-radius:22px;background:white;border:1px solid #e5ebe5}
+    .panel.good{border-top:4px solid #4e9a70}.panel.caution{border-top:4px solid #d5a45a}
+    .panel ul{list-style:none;margin-top:16px;display:grid;gap:10px;color:var(--muted)}
+    .panel li::before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
+    .caution li::before{content:"!";color:#b77b28}
+    .banner{background:var(--dark);color:white;border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .banner h2{color:white;margin-top:0}.banner p{color:#d2e0d6;max-width:600px}
+    footer{padding:28px 24px;border-top:1px solid #e5ebe5;text-align:center;color:var(--muted);font-size:.88rem}
+    @media(max-width:800px){.hero{grid-template-columns:1fr}.hero-image{height:330px}.cards,.steps{grid-template-columns:1fr 1fr}.links{gap:12px}.nav-cta{display:none}}
+    @media(max-width:560px){nav{padding:12px 16px}.links{font-size:.78rem;gap:10px}.links a:nth-child(3){display:none}.hero,section{padding-left:16px;padding-right:16px}.hero{margin-top:24px}.hero-image{height:270px}.cards,.steps,.proscons{grid-template-columns:1fr}.banner{padding:28px;display:block}.banner .btn{margin-top:20px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav aria-label="Menu principal">
+      <a class="brand" href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#accueil"><span class="brand-icon">💧</span> ÉcoSprink</a>
+      <div class="links">
+        <a href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#fonctionnement">Fonctionnement</a>
+        <a href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#utilisation">Utilisation</a>
+        <a href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#avantages">Avantages</a>
+		<a href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#solutions">solutions</a>
+        <a class="nav-cta" href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#contact">Découvrir</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="accueil">
+      <div>
+        <div class="eyebrow">Jardin intelligent · Arrosage raisonné</div>
+        <h1>Un jardin vert,<br><span>sans effort.</span></h1>
+        <p>L’arroseur automatique escamotable prend soin de votre pelouse. Il sort du sol pendant l’arrosage, puis se rétracte pour rester discret et préserver l’espace.</p>
+        <div class="actions">
+          <a class="btn primary" href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#fonctionnement">Comment ça marche ↗</a>
+          <a class="btn secondary" href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#utilisation">Voir les usages</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./ÉcoSprink — Arrosage escamotable_files/photo-1585320806297-9794b3e4eeae" alt="Pelouse verdoyante dans un jardin" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85'">
+        <div class="image-tag">🌱 Arrosage discret et ciblé</div>
+      </div>
+    </div>
+
+    <section id="fonctionnement">
+      <div class="section-head">
+        <div class="eyebrow">Le principe</div>
+        <h2>Comment fonctionne un arroseur escamotable ?</h2>
+        <p>Un système installé sous la pelouse qui s’active à la demande et distribue l’eau de façon régulière.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="./ÉcoSprink — Arrosage escamotable_files/Arroseur noir au cœur de la pelouse.png" alt="Arroseur installé dans une pelouse" loading="lazy">
+          <div class="card-content"><span class="number">01</span><h3>Au repos</h3><p>La tête d’arrosage est rentrée dans le sol. La pelouse reste libre et facile à entretenir.</p></div>
+        </article>
+        <article class="card">
+          <img src="./ÉcoSprink — Arrosage escamotable_files/arroseur escamotable au boulot.jpg" alt="Arrosage d'une pelouse par aspersion" loading="lazy">
+          <div class="card-content"><span class="number">02</span><h3>En fonctionnement</h3><p>La pression de l’eau fait sortir la tête. Elle arrose la zone prévue selon son réglage.</p></div>
+        </article>
+        <article class="card">
+          <img src="./ÉcoSprink — Arrosage escamotable_files/belle pelouse.jpg" alt="Jardin et pelouse entretenus" loading="lazy">
+          <div class="card-content"><span class="number">03</span><h3>Après l’arrosage</h3><p>L’alimentation se coupe, la tête redescend et le dispositif devient presque invisible.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how" id="utilisation">
+      <div class="how-inner">
+        <div class="section-head">
+          <div class="eyebrow">Rappels d’utilisation</div>
+          <h2>Les bons gestes à retenir</h2>
+          <p>Quelques repères simples pour utiliser le système de manière efficace et responsable.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-icon">🕒</div><h3>Arroser au bon moment</h3><p>Privilégier tôt le matin ou en soirée pour limiter l’évaporation de l’eau.</p></article>
+          <article class="step"><div class="step-icon">🎯</div><h3>Vérifier la zone</h3><p>Orienter les jets vers la pelouse ou les plantations, sans arroser les allées.</p></article>
+          <article class="step"><div class="step-icon">💧</div><h3>Adapter la durée</h3><p>Régler le temps d’arrosage selon la météo, le sol et les besoins des végétaux.</p></article>
+          <article class="step"><div class="step-icon">🔎</div><h3>Contrôler les têtes</h3><p>Vérifier régulièrement qu’elles ne sont pas bouchées ou abîmées.</p></article>
+          <article class="step"><div class="step-icon">🌧️</div><h3>Éviter le gaspillage</h3><p>Mettre le programme en pause quand la pluie a suffisamment arrosé le jardin.</p></article>
+          <article class="step"><div class="step-icon">🧰</div><h3>Entretenir le système</h3><p>Nettoyer les filtres et suivre les consignes du fabricant, notamment avant l’hiver.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avantages">
+      <div class="section-head">
+        <div class="eyebrow">En un coup d’œil</div>
+        <h2>Les points forts et les limites</h2>
+      </div>
+      <div class="proscons">
+        <div class="panel good"><h3>✓ Les avantages</h3><ul><li>Discret quand il est au repos</li><li>Arrosage automatique et régulier</li><li>Libère la surface de la pelouse</li><li>Programmation possible avec un contrôleur</li></ul></div>
+        <div class="panel caution"><h3>! Les inconvénients</h3><ul><li>Installation enterrée plus coûteuse</li><li>Besoin d’une pression d’eau adaptée</li><li>Entretien et vérification nécessaires</li><li>Les têtes peuvent se boucher ou être endommagées</li></ul></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="banner">
+        <div><h2>Une solution pratique pour le jardin.</h2><p>Bien réglé et utilisé au bon moment, l’arrosage escamotable aide à entretenir la pelouse tout en limitant les pertes d’eau.</p></div>
+        <a class="btn primary" href="file://se4fs/users/elouan.noel2/Docs/GitHub/arroseur-automatique-Sacha-Elouan/Site_web/site_web.html#accueil">Retour en haut ↑</a>
+      </div>
+    </section>
+  </main>
+  <footer>ÉcoSprink · Présentation pédagogique de l’arrosage automatique escamotable</footer>
+
+</body></html>
